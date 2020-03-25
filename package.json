@@ -10,29 +10,28 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint --fix",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "deploy": "npm run changelog && npm publish && npm run build && node scripts/gh-pages.js"
-
+    "deploy": "npm publish && npm run build && node scripts/gh-pages.js"
   },
   "main": "./src/components/index.js",
   "files": [
     "src/components/index.js",
     "src/components/PgTable.vue"
   ],
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "core-js": "^3.6.4",
-    "element-ui": "^2.13.0",
-    "vue": "^2.6.11",
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-eslint": "~4.2.0",
     "@vue/cli-service": "~4.2.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.0.3",
+    "core-js": "^3.6.4",
+    "element-ui": "^2.13.0",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^6.1.2",
+    "gh-pages": "^2.2.0",
     "prettier": "^1.19.1",
+    "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
   }
 }
