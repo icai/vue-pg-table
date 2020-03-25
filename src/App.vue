@@ -490,8 +490,8 @@ a {
 }
 
 .markdown-body ul {
-    margin-top: 0;
-    margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
 .markdown-body table {
