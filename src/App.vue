@@ -8,7 +8,7 @@
       <p>A paginated table component based element-ui</p>
       <h3>Essential Links</h3>
       <p align="center">
-        <a href="http://blog.w3cub.com/vue-vue-pg-table/?x-page=github"
+        <a href="http://blog.w3cub.com/vue-pg-table/?x-page=github"
           >Live Demo >></a
         >
         <br />
