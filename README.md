@@ -62,7 +62,7 @@ export default {
   }
 }
 ```
-
+- common demo.
 
 ```html
 <pg-table
@@ -74,6 +74,34 @@ export default {
   style="width: 100%"
   @query="queryData"
 ></pg-table>
+
+```
+
+- With slots  `<el-table-column>` and  `columns` props.    
+The order is loop the `columns` and then inject the slot to after.  
+Also provide the `action` slot after the `deafult` slot.
+
+```html
+<pg-table 
+  :data="tableData" 
+  :columns="tableColumns" 
+  :pagination.sync="pagination"
+  row-key="id"
+  style="width: 100%"
+  header-row-class-name="thead-light"
+  @sort-change="sortChange"
+  @selection-change="selectionChange">
+  <el-table-column width="180px" align="center" label="Actions">
+    <div slot-scope="{$index, row}" class="p-1">
+      <el-button
+        v-if="perm('role:edit')"
+        @click.native="handleEdit($index, row)"
+      >
+        编辑菜单权限
+      </el-button>
+    </div>
+  </el-table-column>
+</pg-table>
 
 ```
 
@@ -122,7 +150,12 @@ https://element.eleme.io/#/zh-CN/component/pagination
 | -------- | -------------------------------- |
 | query |  watch to query the data |
 
+## Slots
 
+| Name     | Description                      |
+| -------- | -------------------------------- |
+|  | default slot
+| action | action slot |
 
 ## Donate
 
