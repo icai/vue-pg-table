@@ -226,7 +226,7 @@ export <span class="hljs-keyword">default</span> {
           <tbody>
             <tr>
               <td>query</td>
-              <td>wath to query the data</td>
+              <td>watch to query the data</td>
             </tr>
           </tbody>
         </table>

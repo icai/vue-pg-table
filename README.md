@@ -120,7 +120,7 @@ https://element.eleme.io/#/zh-CN/component/pagination
 
 | Name     | Description                      |
 | -------- | -------------------------------- |
-| query | wath to query the data |
+| query |  watch to query the data |
 
 
 
