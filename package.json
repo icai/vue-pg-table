@@ -1,6 +1,6 @@
 {
   "name": "vue-pg-table",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A paginated table component based element-ui",
   "repository": "https://github.com/icai/vue-pg-table",
   "author": "Terry Cai <gidcai@gmail.com>",
@@ -10,7 +10,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint --fix",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "replease": "standard-version && git push --follow-tags && npm publish",
+    "release": "standard-version",
     "deploy": "npm run build && node scripts/gh-pages.js"
   },
   "main": "./src/components/index.js",
