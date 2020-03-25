@@ -109,12 +109,6 @@ Also provide the `action` slot after the `deafult` slot.
 
 ## Props
 
-inherit All &lt;el-table&gt; props
-
-[https://element.eleme.io/#/zh-CN/component/table](https://element.eleme.io/#/zh-CN/component/table)
-
-
-Options/Props
 
 | Name                  | Type       | Default        | Description                                                                                                                 |
 | --------------------- | ---------- | -------------- | --------------------------------------------------------------------------------------------------------------------------- |
