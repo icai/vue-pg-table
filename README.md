@@ -144,12 +144,16 @@ https://element.eleme.io/#/zh-CN/component/pagination
 | -------- | -------------------------------- |
 | query |  watch to query the data |
 
+<br>
+
 ## Slots
 
 | Name     | Description                      |
 | -------- | -------------------------------- |
 |  | default slot
 | action | action slot |
+
+<br>
 
 ## Donate
 
