@@ -1,6 +1,6 @@
 {
   "name": "vue-pg-table",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "A paginated table component based element-ui",
   "repository": "https://github.com/icai/vue-pg-table",
   "author": "Terry Cai <gidcai@gmail.com>",
