@@ -129,7 +129,6 @@ inherit All &lt;el-pagination&gt; props with default Props
 ```
     background: true
     pageSizes: [10, 20, 50, 100],
-    layout: "total, sizes, prev, pager, next, jumper",
     total: 0,
     pageSize: 10,
     currentPage: 1
