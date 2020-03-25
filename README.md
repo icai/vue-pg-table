@@ -124,8 +124,6 @@ https://element.eleme.io/#/zh-CN/component/pagination
 
 
 
-
-
 ## Donate
 
  <img src="https://raw.githubusercontent.com/icai/vue-pg-table/master/src/assets/donate.png" alt="donate">
