@@ -17,6 +17,15 @@
     "src/components/index.js",
     "src/components/PgTable.vue"
   ],
+  "keywords": [
+    "vue",
+    "table",
+    "pagination",
+    "element",
+    "ui",
+    "element-ui",
+    "page"
+  ],
   "dependencies": {},
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",

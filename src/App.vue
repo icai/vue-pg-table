@@ -114,19 +114,62 @@ export <span class="hljs-keyword">default</span> {
 }</code></pre>
       </div>
       <div>
-        <pre
-          class="prettyprint"
-        ><code class="language-html hljs"><span class="hljs-tag">&lt;<span class="hljs-title">pg-table
+        <div>
+          <ul>
+            <li>common demo.</li>
+          </ul>
+        </div>
+        <div>
+          <pre
+            class="prettyprint"
+          ><code class="language-html hljs"><span class="hljs-tag">&lt;<span class="hljs-title">pg-table
 </span>  <span class="hljs-attribute">:data</span>=<span class="hljs-value">"tableData"</span>
   <span class="hljs-attribute">:columns</span>=<span class="hljs-value">"tableColumns"</span>
   <span class="hljs-attribute">:pagination.sync</span>=<span class="hljs-value">"pagination"</span>
   <span class="hljs-attribute">row-key</span>=<span class="hljs-value">"id"</span>
+  <span class="hljs-attribute">min-height</span>=<span class="hljs-value">"500"</span>
   <span class="hljs-attribute">style</span>=<span class="hljs-value">"width: 100%"</span>
   @<span class="hljs-attribute">query</span>=<span class="hljs-value">"queryData"</span>
 &gt;</span><span
   class="hljs-tag"
 >&lt;/<span class="hljs-title">pg-table</span>&gt;</span>
 </code></pre>
+          <ul>
+            <li>
+              With slots
+              <code>&lt;el-table-column&gt;</code> and
+              <code>columns</code> props. <br />The order is loop the
+              <code>columns</code> and then inject the slot to after. <br />Also
+              provide the <code>action</code> slot after the
+              <code>deafult</code> slot.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <pre
+            class="prettyprint"
+          ><code class="language-html hljs"><span class="hljs-tag">&lt;<span class="hljs-title">pg-table</span> 
+  <span class="hljs-attribute">:data</span>=<span class="hljs-value">"tableData"</span> 
+  <span class="hljs-attribute">:columns</span>=<span class="hljs-value">"tableColumns"</span> 
+  <span class="hljs-attribute">:pagination.sync</span>=<span class="hljs-value">"pagination"</span>
+  <span class="hljs-attribute">row-key</span>=<span class="hljs-value">"id"</span>
+  <span class="hljs-attribute">style</span>=<span class="hljs-value">"width: 100%"</span>
+  <span class="hljs-attribute">header-row-class-name</span>=<span class="hljs-value">"thead-light"</span>
+  @<span class="hljs-attribute">sort-change</span>=<span class="hljs-value">"sortChange"</span>
+  @<span class="hljs-attribute">selection-change</span>=<span class="hljs-value">"selectionChange"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">el-table-column</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"180px"</span> <span class="hljs-attribute">align</span>=<span class="hljs-value">"center"</span> <span class="hljs-attribute">label</span>=<span class="hljs-value">"Actions"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">slot-scope</span>=<span class="hljs-value">"{$index, row}"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p-1"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">el-button
+</span>        <span class="hljs-attribute">v-if</span>=<span class="hljs-value">"perm('role:edit')"</span>
+        @<span class="hljs-attribute">click.native</span>=<span class="hljs-value">"handleEdit($index, row)"</span>
+      &gt;</span>
+        编辑菜单权限
+      <span class="hljs-tag">&lt;/<span class="hljs-title">el-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">el-table-column</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">pg-table</span>&gt;</span>
+</code></pre>
+        </div>
       </div>
       <div>
         <h2 id="props">Props</h2>
@@ -230,6 +273,27 @@ export <span class="hljs-keyword">default</span> {
             </tr>
           </tbody>
         </table>
+
+        <h2 id="slots">Slots</h2>
+        <table class="mce-item-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>&nbsp;</td>
+              <td>default slot</td>
+            </tr>
+            <tr>
+              <td>action</td>
+              <td>action slot</td>
+            </tr>
+          </tbody>
+        </table>
+
         <h2>Donate</h2>
         <img alt="Vue logo" src="./assets/donate.png" />
 
@@ -239,8 +303,8 @@ export <span class="hljs-keyword">default</span> {
     </div>
     <div class="footer">
       <p>
-        ad: <a href="https://docs.w3cub.com/">https://docs.w3cub.com</a>,
-        三岁抬头
+        ad:
+        <a href="https://docs.w3cub.com/">https://docs.w3cub.com</a>, 三岁抬头
       </p>
     </div>
   </div>
@@ -370,14 +434,7 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+
 a {
   color: #42b983;
 }
@@ -430,6 +487,11 @@ a {
 
 .markdown-body blockquote > :last-child {
   margin-bottom: 0;
+}
+
+.markdown-body ul {
+    margin-top: 0;
+    margin-bottom: 16px;
 }
 
 .markdown-body table {
